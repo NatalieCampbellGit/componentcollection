@@ -1,8 +1,9 @@
+// App.js
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Home from './components/Home';
-import About from './components/About'; 
+import Home from './components/About'; 
+import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Resume from './components/Resume'; 
@@ -14,11 +15,15 @@ function App() {
     <Router>
       <div className="app">
         <Header />
-        <Route exact path="/" component={Home} /> 
-        <Route exact path="/about" component={About} /> 
-        <Route path="/portfolio" component={Portfolio} /> 
-        <Route path="/contact" component={Contact} /> 
-        <Route path="/resume" component={Resume} /> 
+        <section className="portfolio-section"> 
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/resume" element={<Resume />} />
+          </Routes>
+        </section>
         <Footer />
       </div>
     </Router>

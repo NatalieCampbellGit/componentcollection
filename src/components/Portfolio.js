@@ -1,41 +1,47 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
+import infopulseImage from '../assets/images/infopulse.jpg';
+import readmeImage from '../assets/images/readme.png';
+import logomakerImage from '../assets/images/logomaker.png';
+import fridgefrenImage from '../assets/images/fridgefren.png';
+import profileImage from '../assets/images/watercolour.jpg';
+import '../App.css'; 
 
 const Portfolio = () => {
   const portfolioItems = [
     {
       id: 1,
       title: 'Interactive Full-Stack Application',
-      image: 'infopulse.jpg',
+      image: infopulseImage,
       repo: 'https://github.com/NatalieCampbellGit/InfoPulse',
       subheader: 'RESTful API',
     },
     {
       id: 2,
       title: 'Professional README Generator',
-      image: 'readme.png',
+      image: readmeImage,
       repo: 'https://github.com/NatalieCampbellGit/BookfileArranger',
       subheader: 'Node.js',
     },
     {
         id: 3,
         title: 'SVG Logo Maker',
-        image: 'logomaker.png',
+        image: logomakerImage,
         repo: 'https://github.com/NatalieCampbellGit/CrestCreator',
         subheader: 'Object-oriented Programming',
     },
     {
         id: 4,
         title: 'Interactive Front-End Application',
-        image: 'fridgefren.png',
-        repo: 'https://github.com/your-username/project4',
+        image: fridgefrenImage,
+        repo: 'https://github.com/stanno03/Fridge-Fren',
         subheader: 'Server-side API',
     }, 
   ];
 
   return (
-    <section id="portfolio">
-      <h1>Portfolio</h1>
+    <section id="portfolio" style={{ backgroundImage: `url(${profileImage})` }}>
+      <h3>Portfolio</h3>
       <div className="portfolio-grid">
         {portfolioItems.map((item) => (
           <a key={item.id} href={item.repo} target="_blank" rel="noopener noreferrer">

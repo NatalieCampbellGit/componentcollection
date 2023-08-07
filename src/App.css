@@ -1,71 +1,184 @@
+/* App.css */
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-image: url('./assets/images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-family: 'Arial', sans-serif;
   color: white;
 }
 
-.App-link {
+/* Header Styles */
+header {
+  background-color: #010814;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem; /* Increase the font size to 3rem (adjust as desired) */
+  color: white;
+  font-family: 'Helvetica', sans-serif; /* Change the font family to 'Helvetica' (or any other desired font) */
+}
+
+h3 {
+  font-size: 3rem; /* Increase the font size to 3rem (adjust as desired) */
+  color: white;
+  font-family: 'Pacifico', cursive; /* Change the font family to 'Brush Script MT' (or any other desired font) */
+}
+
+header nav {
+  margin-top: 20px;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+header nav ul li:last-child {
+  margin-right: 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.footer {
+/* Footer Styles */
+footer {
+  background-color: #010814;
+  color: white;
   text-align: center;
   padding: 20px;
 }
 
-.footer-icons {
-  display: flex;
-  justify-content: center;
+/* Footer Icon Styles */
+footer a {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
 }
 
-.footer-icons a {
-  margin: 10px;
-  color: #333;
-  text-decoration: none;
-  transition: color 0.3s ease;
+/* Customize GitHub Icon Color */
+footer .github-icon {
+  color: #FFCC33; /* Change the color to your desired color code */
 }
 
-.footer-icons a:hover {
-  color: #007bff;
+/* Customize LinkedIn Icon Color */
+footer .linkedin-icon {
+  color: #0077B5; /* Change the color to your desired color code */
 }
 
-#portfolio {
+/* Container Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* About Me Styles */
+
+#about {
+  background-image: url('./assets/images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0; /* Add some padding to separate the content from the background image */
+  color: white;
+}
+
+.about-me {
+  margin-bottom: 20px;
+}
+
+.about-me img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.about-me h2 {
+  margin-top: 20px;
+  font-size: 2rem;
+}
+
+.about-me p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.about-container {
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0;
   text-align: center;
+  color: white;
+}
+
+.about-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 1.2rem;
+}
+
+/* Center the profile image */
+.profile-image {
+  text-align: center;
+}
+
+.profile-image img {
+  display: inline-block;
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Styling for Portfolio page */
+.portfolio-section {
+  margin-top: 20px;
+}
+
+.portfolio-section h3 {
+  font-size: 2rem; /* Increase the font size to 2rem (adjust as desired) */
+  margin: 0 0 20px 0; /* Adjust the margin to match the spacing on the About page */
 }
 
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  grid-gap: 10px; /* Increase the gap to create more space between the portfolio items */
   justify-items: center;
   margin-top: 20px;
 }
@@ -79,6 +192,7 @@
 
 .portfolio-item img {
   width: 100%;
+  max-width: 400px;
   height: auto;
   transition: transform 0.3s;
 }
@@ -118,4 +232,90 @@
 
 .portfolio-hover p {
   color: white;
+}
+
+/* Styling for Contact page */
+h4 {
+  font-size: 3rem; /* Increase the font size to 3rem (adjust as desired) */
+  color: #010814;
+  font-family: 'Pacifico', cursive; /* Change the font family to 'Brush Script MT' (or any other desired font) */
+  text-indent: 20px;
+}
+
+.contact-form {
+  max-width: 800px; /* Increase the max-width to make the form larger */
+  margin: 50px auto; /* Adjust the margin to center the form on the page */
+  background-color: #010814; /* Darker background color */
+  padding: 40px; /* Increase the padding for more space inside the form */
+  color: white;
+}
+
+.contact-form div {
+  display: flex;
+  justify-content: space-between; /* Align the input boxes under the field names */
+  align-items: center;
+  margin-bottom: 20px; /* Add some spacing between each field */
+}
+
+.contact-form label {
+  flex-basis: 30%; /* Adjust the width of the labels to leave space between label and input */
+  margin-right: 10px;
+  text-align: right;
+}
+
+.contact-form input,
+.contact-form textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0; /* Light gray background color for input fields */
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allow vertical resizing for the textarea */
+}
+
+.contact-form button {
+  display: block;
+  width: auto;
+  margin: 0 auto; /* Center the button horizontally */
+  margin-top: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #adadad;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #007bff; /* Change the hover background color */
+}
+
+/* Styling for Resume page */
+
+.resume-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.resume-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center; /* Center the section heading */
+}
+
+.resume-section ul {
+  padding: 0;
+  text-align: left; /* Align the bullet points to the left */
+}
+
+.resume-download {
+  margin-top: 20px; /* Add some space between the resume sections and download link */
+  text-align: center; /* Center the download link */
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../App.css';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -17,7 +18,7 @@ function Contact() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // You can handle form submission here (e.g., send data to backend, display success message, etc.)
+    // handle form submission here (e.g., send data to backend, display success message, etc.)
     console.log('Form submitted:', formData);
     // Clear form fields after submission
     setFormData({
@@ -29,8 +30,8 @@ function Contact() {
 
   return (
     <div>
-      <h1>Contact</h1>
-      <form onSubmit={handleSubmit}>
+      <h4>Contact</h4>
+      <form onSubmit={handleSubmit} className="contact-form">
         <div>
           <label htmlFor="name">Name:</label>
           <input
@@ -61,6 +62,7 @@ function Contact() {
             value={formData.message}
             onChange={handleChange}
             required
+            rows={4} 
           />
         </div>
         <button type="submit">Submit</button>

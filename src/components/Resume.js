@@ -1,100 +1,43 @@
-import React, { Component } from 'react';
-export default  class Resume extends Component {
-  render() {
-    let resumeData = this.props.resumeData;
-    return (
-      <section id="resume">
+// Resume.js
 
-         <div className="row education">
+import React from 'react';
+import '../App.css'; 
 
-            <div className="three columns header-col">
-               <h1><span>Education</span></h1>
-            </div>
-
-            <div className="nine columns main-col">
-              {
-                resumeData.education && resumeData.education.map((item)=>{
-                  return(
-                    <div className="row item">
-                       <div className="twelve columns">
-                          <h3>{item.UniversityName}</h3>
-                          <p className="info">
-                          {item.specialization}
-                          <span>&bull;</span> <em className="date">{item.MonthOfPassing} {item.YearOfPassing}</em></p>
-                          <p>
-                          {item.Achievements}
-                          </p>
-                       </div>
-                    </div>
-                  )
-                })
-              }
-            </div>
-         </div>
-        <div className="row work">
-            <div className="three columns header-col">
-               <h1><span>Work</span></h1>
-            </div>
-
-            <div className="nine columns main-col">
-              {
-                resumeData.work && resumeData.work.map((item) => {
-                  return(
-                    <div className="row item">
-                       <div className="twelve columns">
-                          <h3>{item.CompanyName}</h3>
-                          <p className="info">
-                          {item.specialization}
-                          <span>&bull;</span> <em className="date">{item.MonthOfLeaving} {item.YearOfLeaving}</em></p>
-                          <p>
-                          {item.Achievements}
-                          </p>
-                       </div>
-
-                    </div>
-
-                  )
-                })
-              }
-            </div> 
-         </div>
-
-
-         <div className="row skill">
-
-            <div className="three columns header-col">
-               <h1><span>Skills</span></h1>
-            </div>
-
-            <div className="nine columns main-col">
-
-               <p>
-               {resumeData.skillsDescription}
-               </p>
-
-   				<div className="bars">
-
-   				   <ul className="skills">
-                {
-                  resumeData.skills && resumeData.skills.map((item) => {
-                    return(
-                      <li>
-                      <span className={`bar-expand ${item.skillname.toLowerCase()}`}>
-                      </span><em>{item.skillname}</em>
-                      </li>
-                    )
-                  })
-                }
-
-   					</ul>
-
-   				</div>
-
-   			</div>
-
-         </div>
-
+function Resume() {
+  return (
+    <div>
+      <h4>Resume</h4>
+      <div className="resume-download">
+        <p>
+          Download my resume&nbsp;
+          <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">
+             here 
+          </a>
+        </p>
+      </div>
+      <section className="resume-section">
+        <h2>Front-end Proficiencies</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>JQuery</li>
+          <li>Responsive Design</li>
+          <li>React</li>
+          <li>Bootstrap</li>
+        </ul>
       </section>
-    );
-  }
+      <section className="resume-section">
+        <h2>Back-end Proficiencies</h2>
+        <ul>
+          <li>APIs</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>MySQL, Sequelize </li>
+        </ul>
+      </section>
+    </div>
+  );
 }
+
+export default Resume;
