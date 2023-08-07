@@ -45,6 +45,6 @@ The URL of the GitHub repository: https://github.com/NatalieCampbellGit/componen
 
 ## Preview 
 ![aboutme](./public/aboutme.png)
-![contact](./public/contact.png)
+![contact](./public/contact.jpg)
 ![portfolio](./public/portfolio.png)
-![resume](./public/resume.png)
+![resume](./public/resume.jpg)
